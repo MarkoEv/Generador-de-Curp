@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #353535;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    transition: 8s;    
+}
+body:hover {
+    background-color: #000000;
+    color: #082142;
+    transition: 15s;
+}
+.cadena{
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cadena .st1{
+    font-size: 20px;
+    color: rgb(204, 48, 9);
+}
+.cadena .st2{
+    font-size: 20px;
+    color: rgb(167, 54, 54);
+}
+.cadena .st3{
+    font-size: 20px;
+    color: rgb(168, 27, 27);
+}
+.cadena .st4{
+    font-size: 20px;
+    color: rgb(196, 33, 4);
+}
+
+.content-form {
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: 3s;
+    
+}
+.content-form:hover {
+
+    box-shadow: 0 0 1000px #071c63;
+    border-radius: 8px;
+    transition: 4s;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    padding: 10px 15px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(18, 51, 78);
+    font-family: fantasy;
+    font-style: oblique;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 21px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+button[type="button"]:hover {
+    background-color: #000000;
+    color: white;
+    transition: 1s;
+}
+
+legend {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.result {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.name2 {
+    display: flex
+}
+
+
+@media (max-width: 1000px) {
+    body {
+        background-size: 100% 100%;
+    }
+
+    .content-form {
+        margin: 25px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button[type="button"] {
+        width: 70%;
+        padding: 12px;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .result {
+        width: 100%;
+    }
+}
