@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator of CURP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="content-form">
+            <h2 class="cadena">
+                {
+                <b class="st1">C</b>lave 
+                <b class="st2">Ú</b>nica de 
+                <b class="st3">R</b>egistro de 
+                <b class="st4">P</b>oblación
+                }
+            </h2>
+        <form>
+            <label>Nombres:</label>
+            <input type="text" id="primerName">
+            <label>Apellido Paterno:</label>
+            <input type="text" id="apellidoP">
+            <label>Apellido Materno:</label>
+            <input type="text" id="apellidoM">
+            <legend>Fecha De Nacimiento</legend>
+            <select id="days"></select>
+            <select id="months"></select>
+            <select id="years"></select>
+            <label>¿En Que Estado Naciste?</label>
+            <select id="estates"></select>
+            <label>Genero</label>
+            <select id="genero">
+                <option value="h">Hombre</option>
+                <option value="m">Mujer</option>
+            </select>
+            <div class="result">
+                <label>TU CURP</label>
+                <br>
+                <br>
+                <p id="curp1"></p>
+                <hr>
+            </div>
+            <br>
+            <button type="button">Generar CURP</button>
+        </form>
+    </div>
+    <!-- scripts --Generadores -->
+    <script type="module">
+        import {
+            generarEstados,
+            generarDays,
+            generarMonths,
+            generarYears
+        } from './js/generadores.js';
+
+        window.onload = () => {
+            generarEstados();
+            generarDays();
+            generarMonths();
+            generarYears();
+        }
+    </script>
+    
+
+    <script src="js/script.js"></script>
+    <script src="js/numRandom.js"></script>
+
+
+
+</body>
+
+</html>
