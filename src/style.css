@@ -14,14 +14,14 @@ body {
   text-align: center;
   line-height: 60px;
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   opacity: 1;
-  background: rgba(59, 60, 60, 0.781);
+  background: rgb(255, 255, 255);
 }
 
 .swiper-pagination-bullet-active {
-  color: #000000;
-  background: #ffffff;
+  color: #ffffff;
+  background: #000000;
 }
 
 /* typing effect */
