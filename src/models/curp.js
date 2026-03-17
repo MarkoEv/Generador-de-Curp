@@ -1,4 +1,4 @@
-import { rand } from "../models/randomDigit";
+import { rand } from "../utils/randomDigit";
 export const calculeCurp = () => {
   document.querySelector(".buttonCalcule").addEventListener("click", () => {
     var primerName = document.getElementById("primerName").value[0];

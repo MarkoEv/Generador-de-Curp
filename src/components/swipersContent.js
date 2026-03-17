@@ -3,11 +3,10 @@ export const swiperContent = () => {
      <!-- Swiper -->
   <div class="swiper mySwiper w-full h-[60%]" >
     <div class="swiper-wrapper">
-
-      <div class="swiper-slide text-center text-2xl dark:bg-black/80">
+      <div class="swiper-slide text-center text-2xl dark:bg-black/80" id="swiperOne">
         <div class="grid justify-center gap-3 ">
           <h1 class="text-2xl text-gray-950 dark:text-white" id="instrucciones"></h1>
-          <button class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
+          <button id="initCurp" class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
         </div>
       </div>
 
@@ -61,7 +60,7 @@ export const swiperContent = () => {
 
         </div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination hidden"></div>
   </div>
     `;
 };
