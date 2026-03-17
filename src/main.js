@@ -1,15 +1,7 @@
-import "./style.css";
+import { initSwiper } from "./utils/swiper";
+import { typingEfect } from "./utils/typingEfect";
 
-import {
-  generarEstados,
-  generarDays,
-  generarMonths,
-  generarYears,
-} from "./generadores.js";
-
-window.onload = () => {
-  generarEstados();
-  generarDays();
-  generarMonths();
-  generarYears();
-};
+document.addEventListener("DOMContentLoaded", () => {
+  initSwiper();
+  typingEfect();
+});
