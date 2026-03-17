@@ -1,7 +1,9 @@
-import { initSwiper } from "./utils/swiper";
-import { typingEfect } from "./utils/typingEfect";
 import { header } from "./components/header";
 import { swiperContent } from "./components/swipersContent";
+
+import { initSwiper } from "./utils/swiper";
+import { typingEfect } from "./utils/typingEfect";
+import { theme } from "./utils/theme";
 
 function insertHtml() {
   document.body.insertAdjacentHTML("afterbegin", header());
@@ -11,6 +13,7 @@ function insertHtml() {
 document.addEventListener("DOMContentLoaded", () => {
   insertHtml();
 
+  theme();
   initSwiper();
   typingEfect();
 });
