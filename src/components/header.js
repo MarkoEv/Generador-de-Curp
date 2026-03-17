@@ -23,7 +23,7 @@ export const header = () => {
       </div>
       <div class="">
         <h1 class="text-2xl text-gray-950 dark:text-gray-100" id="text"></h1>
-        <span class="cursor text-gray-950 dark:text-gray-100 text-4xl">|</span>
+        <span class="cursor text-gray-950 dark:text-gray-100 text-4xl" id="curp1">|</span>
       </div>
     </div>
   </header>

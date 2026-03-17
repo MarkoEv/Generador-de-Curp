@@ -13,10 +13,8 @@ export const swiperContent = () => {
 
       <div class="swiper-slide text-center  text-2xl dark:bg-black/80 ">
         <div class="flex justify-center gap-3 ">
-          <div>
-                    <div class="grid p-5 text-gray-950 dark:text-white">APELLIDOS</div>
-
-            <input type="text" class="text-3xl w-100 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center"
+          <div> <div class="grid p-5 text-gray-950 dark:text-white">APELLIDOS</div>
+            <input type="text" id="primerName" class="text-3xl w-100 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center"
               placeholder="Escribe tu nombre">
           </div>
         </div>
@@ -27,9 +25,9 @@ export const swiperContent = () => {
           <div class="grid p-5 text-gray-950 dark:text-white">APELLIDOS</div>
           <div class="">
             <input type="text" class="text-3xl w-100 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center"
-              placeholder="PATERNO">
+              placeholder="PATERNO" id="apellidoP">
             <input type="text" class="text-3xl w-100 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center"
-              placeholder="MATERNO">
+              placeholder="MATERNO" id="apellidoM">
           </div>
         </div>
       </div>
@@ -37,30 +35,31 @@ export const swiperContent = () => {
       <div class="swiper-slide text-center text-2xl dark:bg-black/80 flex justify-center items-center">
         <div class="text-gray-950 dark:text-white p-5">Fecha de nacimiento</div>
         <div class="flex justify-center gap-3.5">
-          <select type="nu" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
-            <option>Día</option>
+          <select id="days" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
           </select>
-          <select type="nu" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
-            <option>Mes</option>
+          <select id="months" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
           </select>
-          <select type="nu" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
-            <option>Año</option>
+          <select id="years" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
           </select>
         </div>
       </div>
 
       <div class="swiper-slide text-center text-2xl dark:bg-black/80 flex justify-center items-center">
         <div class="text-gray-950 dark:text-white p-5"> En que Estado naciste?</div>
-        <select class="text-3xl w-60 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center ">
+        <select id="estates" class="text-3xl w-60 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center ">
           <option class="text-black/50">Selecciona</option>
         </select>
       </div>
 
       <div class="swiper-slide text-center text-2xl dark:bg-black/80 flex justify-center items-center">
         <div class="grid text-gray-950 dark:text-white p-5">Genero</div>
-        <button class="btn py-6 px-6 border rounded-2xl bg-blue-400 hover:bg-blue-400/70 cursor-pointer">HOMBRE</button>
-        <button class="btn py-6 px-6 border rounded-2xl bg-pink-400 hover:bg-pink-400/70 cursor-pointer">MUJER</button>
-      </div>
+        <select id="genero" class="text-3xl w-60 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl py-1.5 pr-3 pl-1 text-center ">
+          <option class="text-black/50" value="h">Hombre</option>
+          <option class="text-black/50" value="m">mujer</option>
+        </select>      
+                  <button type="button" class="buttonCalcule">Generar CURP</button>
+
+        </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
