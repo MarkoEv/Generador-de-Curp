@@ -23,9 +23,9 @@ export const header = () => {
       </div>
       <div class="">
         <h1 class="text-2xl text-gray-950 dark:text-gray-100" id="text"></h1>
-        <span class="cursor text-gray-950 dark:text-gray-100 text-4xl" id="curp1">|</span>
+        <span class="cursor text-gray-950 dark:text-gray-100 text-2xl" id="lyrics">|</span>
       </div>
-                <button id="initCurp" class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
+<button id="initCurp" class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
 
     </div>
   </header>

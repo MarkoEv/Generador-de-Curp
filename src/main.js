@@ -6,6 +6,7 @@ import { theme } from "./models/theme";
 
 import { calculeCurp } from "./models/curp";
 import { clickNext } from "./models/swiper";
+import { getInputsValues } from "./models/getInputs";
 
 import { generarEstados } from "./utils/generateEstados";
 import { generarDays } from "./utils/generateDays";
@@ -33,4 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
   theme();
   calculeCurp();
   clickNext();
+  getInputsValues();
 });
