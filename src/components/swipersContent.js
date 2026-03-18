@@ -28,7 +28,7 @@ export const swiperContent = () => {
         <div class="text-gray-950 dark:text-white p-5">Fecha de nacimiento</div>
         <div class="flex justify-center gap-3.5">
         <input id="days"  placeholder="01" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
-        <input id="moths" placeholder="12" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
+        <input id="months" placeholder="12" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
         <input id="years" placeholder="2000" class="text-3xl w-50 h-20 bg-gray-900 dark:bg-white/5 border rounded-3xl  text-center">
         </div>
       </div>

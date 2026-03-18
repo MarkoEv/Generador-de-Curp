@@ -45,10 +45,10 @@ export const getInputsValues = () => {
   const apellidoP = document.getElementById("apellidoP");
   const apellidoM = document.getElementById("apellidoM");
   const primerName = document.getElementById("primerName");
-  const years = document.getElementById("years");
-  const segundoName = document.getElementById("segundoName");
   const days = document.getElementById("days");
   const months = document.getElementById("months");
+  const years = document.getElementById("years");
+  const segundoName = document.getElementById("segundoName");
   const estates = document.getElementById("estates");
   const genero = document.getElementById("genero");
 
@@ -68,6 +68,14 @@ export const getInputsValues = () => {
   });
   years.addEventListener("change", () => {
     curp.digitoYear = years.value.slice(2, 4);
+    setLyrics();
+  });
+  months.addEventListener("change", () => {
+    curp.digitoMonth = months.value;
+    setLyrics();
+  });
+  days.addEventListener("change", () => {
+    curp.digitoDay = days.value;
     setLyrics();
   });
 };
