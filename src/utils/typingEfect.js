@@ -9,17 +9,5 @@ export const typingEfect = () => {
       setTimeout(escribir, 100);
     }
   }
-
-  const instrucciones = "Presiona el botón";
-  let e = 0;
-  function escribirIns() {
-    if (e < instrucciones.length) {
-      document.getElementById("instrucciones").textContent += instrucciones[e];
-      e++;
-      setTimeout(escribirIns, 50);
-    }
-  }
-
   escribir();
-  escribirIns();
 };

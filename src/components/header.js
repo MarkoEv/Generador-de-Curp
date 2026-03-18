@@ -1,6 +1,6 @@
 export const header = () => {
   return `
-      <header class="h-[40%]">
+      <header class="h-full">
     <div class="swiper-slide text-center place-content-center  dark:bg-black/80 flex justify-center items-center ">
       <div class="top-0 absolute right-0 p-5 flex justify-between items-center gap-5">
         <div class="">
@@ -25,6 +25,8 @@ export const header = () => {
         <h1 class="text-2xl text-gray-950 dark:text-gray-100" id="text"></h1>
         <span class="cursor text-gray-950 dark:text-gray-100 text-4xl" id="curp1">|</span>
       </div>
+                <button id="initCurp" class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
+
     </div>
   </header>
     `;

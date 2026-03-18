@@ -25,17 +25,18 @@ const initSwiper = () => {
 export function clickNext() {
   // iniciar swiper
   const swiper = initSwiper();
-  // paginacion del swiper
-  const pagination = document.querySelector(".swiper-pagination");
-  // contenido html del primer swiper
-  const swiperOne = document.getElementById("swiperOne");
   // boton empezar
-  const btninitCurp = document.getElementById("initCurp");
-  // cuando se da click =>
-  btninitCurp.addEventListener("click", () => {
-    //remover la clase hidden para mostrar la pagination
-    pagination.classList.remove("hidden");
-    // remover el primer swiper
-    swiperOne.remove();
+  const btnInitCurp = document.getElementById("initCurp");
+  // contenido del header
+  const header = document.querySelector("header");
+  // contenido html swiper
+  const swiperHtml = document.querySelector(".mySwiper");
+
+  // cuando se da click mostrar el swiper=>
+  btnInitCurp.addEventListener("click", () => {
+    header.classList.remove("h-full");
+    header.classList.add("h-[40%]");
+    swiperHtml.classList.remove("hidden");
+    btnInitCurp.remove();
   });
 }
