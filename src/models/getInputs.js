@@ -1,3 +1,5 @@
+import { randomNumber } from "../utils/randomDigit";
+
 let curp = {
   digitoOne: "",
   digitoTwo: "",
@@ -6,6 +8,12 @@ let curp = {
   digitoYear: "",
   digitoMonth: "",
   digitoDay: "",
+  digitoGender: "",
+  digitoEstate: "",
+  digitoConsoApP: "",
+  digitoConsoApM: "",
+  digitoConsoName: "",
+  digitoEnd: "",
 };
 
 // funcion para inserta letras en span:id=lyrics
@@ -37,7 +45,7 @@ function primerConsonant(cadena, min, max) {
   const consonantes = subtraccion.match(
     /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/,
   );
-  return consonantes ? consonantes[0] : "";
+  return consonantes ? consonantes[0].toUpperCase() : "";
 }
 
 // extraer los values de los inputs
@@ -48,22 +56,24 @@ export const getInputsValues = () => {
   const days = document.getElementById("days");
   const months = document.getElementById("months");
   const years = document.getElementById("years");
-  const segundoName = document.getElementById("segundoName");
   const estates = document.getElementById("estates");
-  const genero = document.getElementById("genero");
+  const genero = document.getElementById("botones");
 
   // input del apellido paterno
   apellidoP.addEventListener("change", () => {
     curp.digitoOne = apellidoP.value[0];
     curp.digitoTwo = primeVocal(apellidoP.value, 1, 3);
+    curp.digitoConsoApP = primerConsonant(apellidoP.value, 1, 3);
     setLyrics();
   });
   apellidoM.addEventListener("change", () => {
     curp.digitoTree = apellidoM.value[0];
+    curp.digitoConsoApM = primerConsonant(apellidoM.value, 1, 5);
     setLyrics();
   });
   primerName.addEventListener("change", () => {
     curp.digitoFour = primerName.value[0];
+    curp.digitoConsoName = primerConsonant(primerName.value, 1, 4);
     setLyrics();
   });
   years.addEventListener("change", () => {
@@ -76,6 +86,17 @@ export const getInputsValues = () => {
   });
   days.addEventListener("change", () => {
     curp.digitoDay = days.value;
+    setLyrics();
+  });
+  estates.addEventListener("change", () => {
+    curp.digitoEstate = estates.value;
+    setLyrics();
+  });
+  genero.addEventListener("click", (e) => {
+    const gender =
+      e.target.id === "H" || e.target.id === "M" ? e.target.id : null;
+    curp.digitoGender = gender;
+    curp.digitoEnd = randomNumber(0, 9);
     setLyrics();
   });
 };

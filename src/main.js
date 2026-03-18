@@ -1,13 +1,9 @@
 import { header } from "./components/header";
 import { swiperContent } from "./components/swipersContent";
-
 import { typingEfect } from "./utils/typingEfect";
 import { theme } from "./models/theme";
-
-import { calculeCurp } from "./models/curp";
 import { clickNext } from "./models/swiper";
 import { getInputsValues } from "./models/getInputs";
-
 import { generarEstados } from "./utils/generateEstados";
 
 function insertHtml() {
@@ -26,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // modelos
   theme();
-  calculeCurp();
   clickNext();
   getInputsValues();
 });
