@@ -6,7 +6,7 @@ export const typingEfect = () => {
     if (i < text.length) {
       document.getElementById("text").textContent += text[i];
       i++;
-      setTimeout(escribir, 100);
+      setTimeout(escribir, 200);
     }
   }
   escribir();

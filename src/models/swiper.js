@@ -31,12 +31,13 @@ export function clickNext() {
   const header = document.querySelector("header");
   // contenido html swiper
   const swiperHtml = document.querySelector(".mySwiper");
+  swiperHtml.classList.remove("swiper-backface-hidden");
 
   // cuando se da click mostrar el swiper=>
   btnInitCurp.addEventListener("click", () => {
     header.classList.remove("h-full");
     header.classList.add("h-[40%]");
-    swiperHtml.classList.remove("hidden");
+    swiperHtml.removeAttribute("hidden");
     btnInitCurp.remove();
   });
 }

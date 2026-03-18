@@ -13,6 +13,7 @@ let curp = {
   digitoConsoApP: "",
   digitoConsoApM: "",
   digitoConsoName: "",
+  digitoSigle: "",
   digitoEnd: "",
 };
 
@@ -61,23 +62,24 @@ export const getInputsValues = () => {
 
   // input del apellido paterno
   apellidoP.addEventListener("change", () => {
-    curp.digitoOne = apellidoP.value[0];
+    curp.digitoOne = apellidoP.value[0].toUpperCase();
     curp.digitoTwo = primeVocal(apellidoP.value, 1, 3);
     curp.digitoConsoApP = primerConsonant(apellidoP.value, 1, 3);
     setLyrics();
   });
   apellidoM.addEventListener("change", () => {
-    curp.digitoTree = apellidoM.value[0];
+    curp.digitoTree = apellidoM.value[0].toUpperCase();
     curp.digitoConsoApM = primerConsonant(apellidoM.value, 1, 5);
     setLyrics();
   });
   primerName.addEventListener("change", () => {
-    curp.digitoFour = primerName.value[0];
+    curp.digitoFour = primerName.value[0].toUpperCase();
     curp.digitoConsoName = primerConsonant(primerName.value, 1, 4);
     setLyrics();
   });
   years.addEventListener("change", () => {
     curp.digitoYear = years.value.slice(2, 4);
+    curp.digitoSigle = ObtenerSiglo(years.value);
     setLyrics();
   });
   months.addEventListener("change", () => {

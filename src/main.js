@@ -12,16 +12,10 @@ function insertHtml() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // html inject
   insertHtml();
-
-  // generadores
   generarEstados();
-  //
   typingEfect();
-
-  // modelos
   theme();
-  clickNext();
   getInputsValues();
+  clickNext();
 });

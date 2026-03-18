@@ -1,7 +1,6 @@
 export const swiperContent = () => {
   return `
-     <!-- Swiper -->
-  <div class="swiper mySwiper w-full h-[60%] hidden">
+  <div class="swiper mySwiper w-full h-[60%]" hidden>
     <div class="swiper-wrapper">
       <div class="swiper-slide text-center  text-2xl dark:bg-black/80 ">
         <div class="flex justify-center gap-3 ">
