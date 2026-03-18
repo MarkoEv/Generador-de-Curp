@@ -9,9 +9,6 @@ import { clickNext } from "./models/swiper";
 import { getInputsValues } from "./models/getInputs";
 
 import { generarEstados } from "./utils/generateEstados";
-import { generarDays } from "./utils/generateDays";
-import { generarMonths } from "./utils/generateMonths";
-import { generarYears } from "./utils/generateYears";
 
 function insertHtml() {
   document.body.insertAdjacentHTML("afterbegin", header());
@@ -24,9 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // generadores
   generarEstados();
-  generarDays();
-  generarMonths();
-  generarYears();
   //
   typingEfect();
 

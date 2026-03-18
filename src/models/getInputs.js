@@ -1,52 +1,73 @@
 let curp = {
-  apellidoPaterno: "",
-  apellidoMaterno: "",
-  primerNombre: "",
-  segundoNombre: "",
+  digitoOne: "",
+  digitoTwo: "",
+  digitoTree: "",
+  digitoFour: "",
+  digitoYear: "",
+  digitoMonth: "",
+  digitoDay: "",
 };
 
 // funcion para inserta letras en span:id=lyrics
-function setLyrics(curp) {
+function setLyrics() {
   // obtener valores
   const values = Object.values(curp);
   // quitar la coma
   const quitComa = values.join("");
-
   const spanLyrics = document.querySelector("#lyrics");
   spanLyrics.innerHTML = quitComa;
 }
 
-// funcion para obtener la primer vocal
-function primeVocal(cadena) {
-  let vocales = cadena.match(/[aeiouáéíóúAEIOUÁÉÍÓÚ]/);
-  const resultado = vocales[0].toUpperCase();
+// funcion para obtener la primer vocal del apeelido paterno
+function primeVocal(cadena, min, max) {
+  const subtraccion = cadena.substring(min, max);
+  const vocal = subtraccion.match(/[aeiouáéíóúAEIOUÁÉÍÓÚ]/);
+  const resultado = vocal[0].toUpperCase();
   return resultado;
 }
+
+// obtener tipo de siglo: [A] o [0]
+function ObtenerSiglo(year) {
+  return year >= 2000 ? "A" : "0";
+}
+
+// obtener consonante
+function primerConsonant(cadena, min, max) {
+  const subtraccion = cadena.substring(min, max);
+  const consonantes = subtraccion.match(
+    /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/,
+  );
+  return consonantes ? consonantes[0] : "";
+}
+
+// extraer los values de los inputs
 export const getInputsValues = () => {
   const apellidoP = document.getElementById("apellidoP");
   const apellidoM = document.getElementById("apellidoM");
   const primerName = document.getElementById("primerName");
+  const years = document.getElementById("years");
   const segundoName = document.getElementById("segundoName");
   const days = document.getElementById("days");
   const months = document.getElementById("months");
-  const years = document.getElementById("years");
   const estates = document.getElementById("estates");
   const genero = document.getElementById("genero");
 
+  // input del apellido paterno
   apellidoP.addEventListener("change", () => {
-    curp.apellidoPaterno = primeVocal(apellidoP.value);
-    setLyrics(curp);
+    curp.digitoOne = apellidoP.value[0];
+    curp.digitoTwo = primeVocal(apellidoP.value, 1, 3);
+    setLyrics();
   });
   apellidoM.addEventListener("change", () => {
-    curp.apellidoMaterno = primeVocal(apellidoM.value);
-    setLyrics(curp);
+    curp.digitoTree = apellidoM.value[0];
+    setLyrics();
   });
   primerName.addEventListener("change", () => {
-    curp.primerNombre = primeVocal(primerName.value);
-    setLyrics(curp);
+    curp.digitoFour = primerName.value[0];
+    setLyrics();
   });
-  segundoName.addEventListener("change", () => {
-    curp.segundoNombre = primeVocal(segundoName.value);
-    setLyrics(curp);
+  years.addEventListener("change", () => {
+    curp.digitoYear = years.value.slice(2, 4);
+    setLyrics();
   });
 };
