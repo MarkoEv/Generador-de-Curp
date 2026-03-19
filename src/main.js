@@ -8,6 +8,7 @@ import { changePage } from "./models/changePage";
 import { validationsInputs } from "./utils/validationsInputs";
 import { cancelTab } from "./utils/cancelTab";
 import { initSwiper } from "./utils/swiper"; // ← importar aquí
+import { pintLiByPage } from "./utils/pintLiByPage";
 
 function insertHtml() {
   document.body.insertAdjacentHTML("afterbegin", header());
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // no moverlo! 
   const swiper = initSwiper() 
   changePage(swiper)
+  pintLiByPage(swiper)
 
   validationsInputs();
   cancelTab();  

@@ -8,7 +8,8 @@ export const header = () => {
             <div class="top-0 absolute right-0 p-5 flex justify-between items-center gap-5">
                 <div id="iconImg" class="hidden">
                 <a href="/">
-                <img src="${icon}" class="w-7">
+                <img src="${icon}" class="w-7 hidden dark:block">
+                <img src="${logoDark}" class="w-7 dark:hidden">
                 </a>
                 </div>    
             <div class="">
