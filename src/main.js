@@ -1,10 +1,13 @@
 import { header } from "./components/header";
 import { swiperContent } from "./components/swipersContent";
-import { typingEfect } from "./utils/typingEfect";
 import { theme } from "./models/theme";
-import { clickNext } from "./models/swiper";
+import { clickNext } from "./models/initButton";
 import { getInputsValues } from "./models/getInputs";
 import { generarEstados } from "./utils/generateEstados";
+import { changePage } from "./models/changePage";
+import { validationsInputs } from "./utils/validationsInputs";
+import { cancelTab } from "./utils/cancelTab";
+import { initSwiper } from "./utils/swiper"; // ← importar aquí
 
 function insertHtml() {
   document.body.insertAdjacentHTML("afterbegin", header());
@@ -14,8 +17,15 @@ function insertHtml() {
 document.addEventListener("DOMContentLoaded", () => {
   insertHtml();
   generarEstados();
-  typingEfect();
   theme();
   getInputsValues();
   clickNext();
+  
+  // no moverlo! 
+  const swiper = initSwiper() 
+  changePage(swiper)
+
+  validationsInputs();
+  cancelTab();  
+
 });
