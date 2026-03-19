@@ -62,7 +62,7 @@ export const getInputsValues = () => {
   whatIs.addEventListener("click", () => {
     clickInstructions(
       whatIs,
-      " El último dígito de la CURP es un dígito verificador (checksum) que sirve para confirmar que la clave está bien construida; se obtiene mediante una fórmula basada en los primeros 17 caracteres, no contiene información personal y su función es únicamente detectar errores o inconsistencias, aunque en la práctica no siempre es confiable calcularlo manualmente sin usar la implementación oficial.",
+      " El último dígito de la CURP es un dígito verificador que sirve para confirmar que la clave está bien construida;  en la práctica no siempre es confiable calcularlo manualmente sin usar la implementación oficial.",
     );
   });
 

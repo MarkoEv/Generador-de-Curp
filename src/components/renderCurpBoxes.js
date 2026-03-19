@@ -4,24 +4,24 @@ import { curp } from "../models/getInputs";
 export const renderCurpBoxes = () => {
     
 const curpTemplate = `
-<li class="digitoOne w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoOne ||  ""}</li>
-<li class="digitoTwo w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoTwo ||  ""}</li>
-<li class="digitoTree w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoTree ||  ""}</li>
-<li class="digitoFour w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoFour ||  ""}</li>
-<li class="digitoYear1 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoYear?.[0] ||  ""}</li>
-<li class="digitoYear2 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoYear?.[1] ||  ""}</li>
-<li class="digitoMonth1 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoMonth[0] ||  ""}</li>
-<li class="digitoMonth2 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoMonth[1] ||  ""}</li>
-<li class="digitoDay1 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoDay[0] ||  ""}</li>
-<li class="digitoDay2 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoDay[1] ||  ""}</li>
-<li class="digitoGender w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoGender ||  ""}</li>
-<li class="digitoEstate1 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoEstate[0] ||  ""}</li>
-<li class="digitoEstate2 w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoEstate[1] ||  ""}</li>
-<li class="digitoConsoApP w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoConsoApP ||  ""}</li>
-<li class="digitoConsoApM w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoConsoApM ||  ""}</li>
-<li class="digitoConsoName w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoConsoName ||  ""}</li>
-<li class="digitoSigle w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoSigle ||  ""}</li>
-<li class="digitoEnd w-10 h-10 border text-center border-white flex justify-center items-center">${curp.digitoEnd ||  ""}</li>
+<li class="digitoOne w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoOne ||  ""}</li>
+<li class="digitoTwo w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoTwo ||  ""}</li>
+<li class="digitoTree w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoTree ||  ""}</li>
+<li class="digitoFour w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoFour ||  ""}</li>
+<li class="digitoYear1 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoYear?.[0] ||  ""}</li>
+<li class="digitoYear2 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoYear?.[1] ||  ""}</li>
+<li class="digitoMonth1 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoMonth[0] ||  ""}</li>
+<li class="digitoMonth2 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoMonth[1] ||  ""}</li>
+<li class="digitoDay1 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoDay[0] ||  ""}</li>
+<li class="digitoDay2 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoDay[1] ||  ""}</li>
+<li class="digitoGender w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoGender ||  ""}</li>
+<li class="digitoEstate1 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoEstate[0] ||  ""}</li>
+<li class="digitoEstate2 w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoEstate[1] ||  ""}</li>
+<li class="digitoConsoApP w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoConsoApP ||  ""}</li>
+<li class="digitoConsoApM w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoConsoApM ||  ""}</li>
+<li class="digitoConsoName w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoConsoName ||  ""}</li>
+<li class="digitoSigle w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoSigle ||  ""}</li>
+<li class="digitoEnd w-5 lg:w-12 md:w-8 h-5 md:h-8 lg:h-12 border text-center border-white flex justify-center items-center text-xl md:text-2xl lg:text-3xl">${curp.digitoEnd ||  ""}</li>
 `;
 
 // const digitoOne = document.querySelector(".digitoOne")

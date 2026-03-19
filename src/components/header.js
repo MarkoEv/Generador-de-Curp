@@ -29,12 +29,12 @@
                     </svg>
                 </label>
             </div>
-            <div class="top-10 absolute right-0 p-5  justify-between items-center gap-5 hidden" id="divTools">
-                <div class="grid gap-5 justify-center">
-                    <a href="/" title="Reiniciar" class="border rounded-2xl border-white opacity-50 hover:opacity-100 cursor-pointer text-3xl p-0.5">
+            <div class="top-0 absolute left-0 p-5 items-center hidden" id="divTools">
+                <div class="grid grid-cols-2 gap-3 justify-center">
+                    <a href="/" title="Reiniciar" class="flex justify-center items-center gap-1 border border-white cursor-pointer rounded-xl">
                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-refresh"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></svg>
-                    </a>
-                    <button id="slidePrev" title="Anterior" class="border rounded-2xl border-white opacity-50 hover:opacity-100 cursor-pointer text-3xl p-0.5">
+                       </a>
+                    <button id="slidePrev" title="Anterior" class="flex justify-center items-center border border-white opacity-50 hover:opacity-100 cursor-pointer rounded-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
                 </button>
             </div>
@@ -44,17 +44,17 @@
             <div class="">
                 <h1 class="text-2xl text-gray-950 dark:text-gray-100" id="text">
                 </h1>
-                <span class="text-gray-950 dark:text-gray-100 text-2xl" id="lyrics">
+                <span class="text-gray-950 dark:text-gray-100 text-[10px] lg:text-2xl md:text-2xl" id="lyrics">
                 </span>
             </div>
             <div>
                 <button id="initCurp"
-                    class="btn border rounded-2xl dark:bg-white w-60 h-20 dark:text-gray-900 text-3xl">Empezar</button>
+                    class="btn border rounded-2xl dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl">Empezar</button>
             </div>
             <div>
             </div>
             <div class="py-6">
-                <span id="instructions" class="text-2xl p-5 text-gray-950 dark:text-white"></span>
+                <span id="instructions" class="lg:text-3xl md:text-2xl text-[16px] p-5 text-gray-950 dark:text-white"></span>
             </div>
         </div>
     </header>
