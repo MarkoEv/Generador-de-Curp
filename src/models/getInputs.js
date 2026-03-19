@@ -1,6 +1,7 @@
-import { randomNumber } from "../utils/randomDigit";
+import { clickInstructions } from "../utils/clickInstructions";
+import { renderCurpBoxes } from "../components/renderCurpBoxes";
 
-let curp = {
+export let curp = {
   digitoOne: "",
   digitoTwo: "",
   digitoTree: "",
@@ -17,22 +18,17 @@ let curp = {
   digitoEnd: "",
 };
 
-// funcion para inserta letras en span:id=lyrics
-function setLyrics() {
-  // obtener valores
-  const values = Object.values(curp);
-  // quitar la coma
-  const quitComa = values.join("");
-  const spanLyrics = document.querySelector("#lyrics");
-  spanLyrics.innerHTML = quitComa;
+// obtener numero random
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// funcion para obtener la primer vocal del apeelido paterno
+// funcion para obtener la primer vocal de la cadena recibida
 function primeVocal(cadena, min, max) {
   const subtraccion = cadena.substring(min, max);
   const vocal = subtraccion.match(/[aeiouáéíóúAEIOUÁÉÍÓÚ]/);
-  const resultado = vocal[0].toUpperCase();
-  return resultado;
+  const resultado = vocal ? vocal[0] : "";
+  return resultado.toUpperCase();
 }
 
 // obtener tipo de siglo: [A] o [0]
@@ -59,46 +55,96 @@ export const getInputsValues = () => {
   const years = document.getElementById("years");
   const estates = document.getElementById("estates");
   const genero = document.getElementById("botones");
+  const btnNumberRand = document.getElementById("numberRand");
 
-  // input del apellido paterno
+  // extra: Boton para mostrar innfrormacion sobre el dígito verificador
+  const whatIs = document.getElementById("whatIs");
+  whatIs.addEventListener("click", () => {
+    clickInstructions(
+      whatIs,
+      " El último dígito de la CURP es un dígito verificador (checksum) que sirve para confirmar que la clave está bien construida; se obtiene mediante una fórmula basada en los primeros 17 caracteres, no contiene información personal y su función es únicamente detectar errores o inconsistencias, aunque en la práctica no siempre es confiable calcularlo manualmente sin usar la implementación oficial.",
+    );
+  });
+
+  // evento de click
+  clickInstructions(
+    primerName,
+    "Se obtiene la primera letra y la primera consonante",
+  );
+    clickInstructions(
+    apellidoP,
+    "Se obtiene la primera letra, la primera vocal y la primera consonante",
+  );
+    clickInstructions(
+    apellidoM,
+    "Se obtiene la primera letra y la primera consonante",
+  );
+  clickInstructions(
+    days,
+    "Se obtiene los dos dígitos del día",
+  );
+  clickInstructions(
+    months,
+    "Se obtiene los dos dígitos del mes",
+  );
+  clickInstructions(
+    years,
+    "Se obtiene los dos ultimos dígitos del año y el siglo"
+  );
+  clickInstructions(
+    estates,
+    "Se obtiene el código del estado seleccionado",
+  );
+
+
+
+  // eventos para detectar fuera del input
   apellidoP.addEventListener("change", () => {
     curp.digitoOne = apellidoP.value[0].toUpperCase();
     curp.digitoTwo = primeVocal(apellidoP.value, 1, 3);
     curp.digitoConsoApP = primerConsonant(apellidoP.value, 1, 3);
-    setLyrics();
+    renderCurpBoxes();
   });
   apellidoM.addEventListener("change", () => {
     curp.digitoTree = apellidoM.value[0].toUpperCase();
     curp.digitoConsoApM = primerConsonant(apellidoM.value, 1, 5);
-    setLyrics();
+    renderCurpBoxes();
   });
   primerName.addEventListener("change", () => {
-    curp.digitoFour = primerName.value[0].toUpperCase();
+    const nombre = primerName.value[0].toUpperCase();
+    curp.digitoFour = nombre;
     curp.digitoConsoName = primerConsonant(primerName.value, 1, 4);
-    setLyrics();
+    renderCurpBoxes();
   });
   years.addEventListener("change", () => {
     curp.digitoYear = years.value.slice(2, 4);
     curp.digitoSigle = ObtenerSiglo(years.value);
-    setLyrics();
+    renderCurpBoxes();
   });
   months.addEventListener("change", () => {
-    curp.digitoMonth = months.value;
-    setLyrics();
+    curp.digitoMonth = String(months.value).padStart(2, "0");
+    renderCurpBoxes();
   });
   days.addEventListener("change", () => {
+    days.value = String(days.value).padStart(2, "0");
     curp.digitoDay = days.value;
-    setLyrics();
+    renderCurpBoxes();
   });
   estates.addEventListener("change", () => {
     curp.digitoEstate = estates.value;
-    setLyrics();
+    renderCurpBoxes();
   });
   genero.addEventListener("click", (e) => {
-    const gender =
-      e.target.id === "H" || e.target.id === "M" ? e.target.id : null;
-    curp.digitoGender = gender;
-    curp.digitoEnd = randomNumber(0, 9);
-    setLyrics();
+    if (e.target.id === "H" || e.target.id === "M") {
+      curp.digitoGender = e.target.id;
+      renderCurpBoxes();
+    } else {
+      return;
+    }
+  });
+  btnNumberRand.addEventListener("click", () => {
+    curp.digitoEnd = randomNumber(1, 9);
+    document.getElementById("digitoEnd").value = curp.digitoEnd;
+    renderCurpBoxes();
   });
 };
