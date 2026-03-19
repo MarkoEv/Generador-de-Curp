@@ -1,5 +1,6 @@
 const estadosMX = [
-  { value: "", text: "Selecciona un estado" },
+  { value: "0", text: "Selecciona" },
+  { value: "NE", text: "Nacido en el Extranjero" },
   { value: "AG", text: "Aguascalientes" },
   { value: "BC", text: "Baja California" },
   { value: "BS", text: "Baja California Sur" },
@@ -19,7 +20,7 @@ const estadosMX = [
   { value: "MS", text: "Morelos" },
   { value: "NT", text: "Nayarit" },
   { value: "NL", text: "Nuevo León" },
-  { value: "OC", text: "Oaxaca" },
+  { value: "OA", text: "Oaxaca" },
   { value: "PL", text: "Puebla" },
   { value: "QT", text: "Querétaro" },
   { value: "QR", text: "Quintana Roo" },
@@ -40,6 +41,7 @@ export function generarEstados() {
   estadosMX.forEach((estates) => {
     const option = document.createElement("option");
     option.value = estates.value;
+    option.className = "dark:text-black";
     option.textContent = estates.text;
     select.appendChild(option);
   });
