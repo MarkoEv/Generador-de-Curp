@@ -137,6 +137,18 @@ export const getInputsValues = () => {
   genero.addEventListener("click", (e) => {
     if (e.target.id === "H" || e.target.id === "M") {
       curp.digitoGender = e.target.id;
+      // manejar el evento click en botones para aplicar opacidad
+      const targetH = document.getElementById("H");
+      const targetM = document.getElementById("M");
+
+      if (e.target.id === "H") { 
+      targetH.classList.add("opacity-100")
+      targetM.classList.remove("opacity-100")
+    } else if(e.target.id === "M"){
+      targetM.classList.add("opacity-100")
+      targetH.classList.remove("opacity-100")
+    }
+      
       renderCurpBoxes();
     } else {
       return;
