@@ -1,6 +1,6 @@
 export const theme = () => {
   // al cargar la pagina
-  const saveTheme = localStorage.getItem("theme") || "light";
+  const saveTheme = localStorage.getItem("theme") || "dark";
   //   <html class="dark">
   if (saveTheme === "dark") document.documentElement.classList.add("dark");
   // al cambiar toggle

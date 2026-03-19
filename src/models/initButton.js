@@ -16,20 +16,28 @@ export function clickNext() {
   const swiperHtml = document.querySelector(".mySwiper");
   swiperHtml.classList.remove("swiper-backface-hidden");
   textInstruction("Descubre como se construye tu curp");
-  
+  // div logos
+  const logos = document.getElementById("logos");
   // boton para retroceder slide
   const divTools = document.getElementById("divTools");
   
   
+
+
   // cuando se da click mostrar el swiper=>
   btnInitCurp.addEventListener("click", () => {
     header.classList.remove("h-full");
     header.classList.add("h-[40%]");
+    
     swiperHtml.removeAttribute("hidden");
+    
     btnInitCurp.remove();
+
     textInstruction("Ingresa tus datos");
     renderCurpBoxes();
 
     divTools.classList.remove("hidden");
+
+    logos.classList.add("hidden")
   });
 }

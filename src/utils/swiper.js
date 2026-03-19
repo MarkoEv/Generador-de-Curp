@@ -6,7 +6,7 @@ export const initSwiper = () => {
       el: ".swiper-pagination",
       clickable: true,
       renderBullet: (index, className) => {
-        return `<span class="${className} border-2">${index + 1}</span>`
+        return `<span class="${className} dark:border-none border-2">${index + 1}</span>`
       },
     },
   });

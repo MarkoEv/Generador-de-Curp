@@ -14,15 +14,18 @@ body {
   text-align: center;
   line-height: 40px;
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   opacity: 1;
-  background: rgb(255, 255, 255);
+  background: rgb(123, 117, 117);
 }
 
 .swiper-pagination-bullet-active {
-  color: #ffffff;
-  background: #000000;
+  color: #000000;
+  background: #ffffff;
 }
+
+
+
 
 /* typing effect */
 .cursor {

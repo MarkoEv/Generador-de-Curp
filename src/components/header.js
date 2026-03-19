@@ -1,4 +1,6 @@
-      export const header = () => {
+import logoDark from "../../public/logos/gcDark.png"
+import logoLigth from "../../public/logos/gcLight.png"
+export const header = () => {
     return `
     <header class="h-full">
         <div class="swiper-slide text-center place-content-center  dark:bg-black/80 flex justify-center items-center ">
@@ -31,11 +33,21 @@
             </div>
             <div class="top-0 absolute left-0 p-5 items-center hidden" id="divTools">
                 <div class="grid grid-cols-2 gap-3 justify-center">
-                    <a href="/" title="Reiniciar" class="flex justify-center items-center gap-1 border border-white cursor-pointer rounded-xl">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-refresh"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></svg>
+                    <a href="/" title="Reiniciar" class="flex justify-center items-center gap-1 border bg-blue-800 dark:bg-gray-100 border-blue-800 dark:border-white cursor-pointer rounded-xl">
+                       <svg xmlns="http://www.w3.org/2000/svg" 
+                       width="24" 
+                       height="24" 
+                       viewBox="0 0 24 24" 
+                       fill="none" 
+                       stroke="currentColor" 
+                       stroke-width="2" stroke-linecap="round" 
+                       stroke-linejoin="round" 
+                       class="icon icon-tabler icons-tabler-outline icon-tabler-refresh dark:text-black text-white ">
+                       <path stroke="none" 
+                       d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></svg>
                        </a>
-                    <button id="slidePrev" title="Anterior" class="flex justify-center items-center border border-white opacity-50 hover:opacity-100 cursor-pointer rounded-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+                    <button id="slidePrev" title="Anterior" class="flex justify-center items-center border bg-blue-800 dark:bg-gray-100 border-blue-800 dark:border-white opacity-50 hover:opacity-100 cursor-pointer rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left dark:text-black text-white"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
                 </button>
             </div>
         </div>
@@ -47,14 +59,18 @@
                 <span class="text-gray-950 dark:text-gray-100 text-[10px] lg:text-2xl md:text-2xl" id="lyrics">
                 </span>
             </div>
-            <div>
-                <button id="initCurp"
-                    class="btn border rounded-2xl dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl">Empezar</button>
+            <div class="grid justify-center items-center gap-13  justify-items-center">
+            <div id="logos" class="">
+            <img src="${logoLigth}"class="animate-pulse hidden dark:flex">
+            <img src="${logoDark}" class="animate-pulse dark:hidden">
+            </div>
+            <button id="initCurp"
+                    class="btn border rounded-2xl text-white bg-blue-900 dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl">Empezar</button>
             </div>
             <div>
             </div>
             <div class="py-6">
-                <span id="instructions" class="lg:text-3xl md:text-2xl text-[16px] p-5 text-gray-950 dark:text-white"></span>
+                <span id="instructions" class="lg:text-3xl md:text-2xl text-[16px] p-5 text-blue-800 dark:text-white"></span>
             </div>
         </div>
     </header>
