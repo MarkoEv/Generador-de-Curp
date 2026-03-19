@@ -101,8 +101,8 @@ export const getInputsValues = () => {
   // eventos para detectar fuera del input
   apellidoP.addEventListener("change", () => {
     curp.digitoOne = apellidoP.value[0].toUpperCase();
-    curp.digitoTwo = primeVocal(apellidoP.value, 1, 3);
-    curp.digitoConsoApP = primerConsonant(apellidoP.value, 1, 3);
+    curp.digitoTwo = primeVocal(apellidoP.value, 1, 4);
+    curp.digitoConsoApP = primerConsonant(apellidoP.value, 1, 4);
     renderCurpBoxes();
   });
   apellidoM.addEventListener("change", () => {
