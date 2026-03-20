@@ -89,7 +89,7 @@ export const getInputsValues = () => {
   );
   clickInstructions(
     years,
-    "Se obtiene los dos ultimos dígitos del año y el siglo"
+    "Se obtiene los dos ultimos dígitos del año y el siglo. ¿Año 2000 en adelante? el siglo es 'A', si no '0'"
   );
   clickInstructions(
     estates,

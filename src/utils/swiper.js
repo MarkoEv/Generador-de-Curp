@@ -1,10 +1,10 @@
 // inicializar swiper
 export const initSwiper = () => {
   const swiper = new Swiper(".mySwiper", {
-    allowTouchMove: true,
+    allowTouchMove: false,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      clickable: false,
       renderBullet: (index, className) => {
         return `<span class="${className} dark:border-none border-2">${index + 1}</span>`
       },
