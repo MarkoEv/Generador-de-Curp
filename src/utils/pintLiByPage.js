@@ -19,10 +19,8 @@ const active = digitos[swiper.activeIndex] || [];
 active.forEach(clase => {
     document.querySelectorAll(`.${clase}`).forEach(li => {
         // console.log(li);
-        li.classList.add("dark:bg-white")
-        li.classList.add("dark:text-black")
-        li.classList.remove("dark:text-white")
-        li.classList.remove("dark:bg-transparent")
+        li.classList.remove("dark:text-white", "text-blue-700", "dark:bg-transparent")
+        li.classList.add("dark:text-black", "text-white","dark:bg-white", "bg-blue-700")
     })    
 })
 }

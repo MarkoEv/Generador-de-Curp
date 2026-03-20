@@ -27,7 +27,7 @@ export function clickNext() {
   // cuando se da click mostrar el swiper=>
   btnInitCurp.addEventListener("click", () => {
     header.classList.remove("h-full");
-    header.classList.add("md:h-[40%]", "lg:h-[40%]", "h-[60%]");
+    header.classList.add("md:h-[50%]", "lg:h-[50%]", "h-[50%]");
     swiperHtml.removeAttribute("hidden");
     btnInitCurp.remove();
     textInstruction("Ingresa tus datos");

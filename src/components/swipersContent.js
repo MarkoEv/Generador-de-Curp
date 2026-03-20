@@ -8,7 +8,7 @@ export const swiperContent = () => {
   .insertAdjacentHTML("afterend", spanCursor);
 
   return `
-  <div class="swiper mySwiper w-full h-[40%] md:h-[60%] lg:h-[60%]" hidden>
+  <div class="swiper mySwiper w-full h-[50%]" hidden>
     <div class="swiper-wrapper">
       <div class="swiper-slide text-center  text-2xl dark:bg-black/80 ">
         <div class="grid justify-center gap-3 ">
@@ -97,18 +97,23 @@ export const swiperContent = () => {
         </div>
       </div>
 
-      <div class="swiper-slide text-2xl dark:bg-black/80 text-center flex justify-center items-center">
-        <div class="grid text-center justify-center justify-items-center gap-5">
-          <input id="digitoEnd" type="text"
-            class="items-center text-7xl w-25 h-30 bg-white text-blue-700 dark:text-white dark:bg-white/5 border-2 rounded-3xl py-1.5 pr-3 pl-1 text-center"
-            value="" min="0" max="9" disabled>
-          <button id="numberRand"
-            class="btn border rounded-2xl  text-white bg-green-600 dark:bg-white w-50 md:w-50 lg:w-70 h-15 md:h-20 lg:h-20 dark:text-gray-900 lg:text-3xl md:text-2xl text-lg">
-            Generar número</button>
-          <button id="whatIs" class="text-sm cursor-pointer text-blue-700 dark:text-white top-0">¿Qué es el dígito
-            final?</button>
-        </div>
+     <div class="swiper-slide text-2xl dark:bg-black/80 text-center flex justify-center items-center">
+    <div class="grid text-center justify-center justify-items-center gap-5">
+      <div class="flex gap-2">
+        <input id="digitoEnd" type="text"
+          class="items-center text-7xl w-25 h-30 bg-white text-blue-700 dark:text-white dark:bg-white/5 border-2 rounded-3xl py-1.5 pr-3 pl-1 text-center"
+          value="" min="0" max="9" disabled>
+        <button id="numberRand"
+          class="btn border rounded-2xl  text-white bg-green-600 dark:bg-white w-25 h-30 md:w-25 md:h-30 lg:w-25 lg:h-30 dark:text-gray-900 lg:text-xl md:text-xl text-lg">
+          Generar número</button>
       </div>
+      <button id="whatIs" class="text-sm cursor-pointer text-blue-700 dark:text-white top-0">¿Qué es el dígito
+        final?</button>
+      <div>
+          <button id="finButton" class="btn border rounded-2xl  text-white bg-green-600 dark:bg-white w-50 md:w-70 lg:w-100 h-15 md:h-20 lg:h-20 dark:text-gray-900 lg:text-3xl md:text-2xl text-lg opacity-50" disabled>Mi curp</button>
+      </div>
+    </div>
+  </div>
 
     </div><!-- cierra swiper-wrapper -->
     <div class="swiper-pagination"></div>

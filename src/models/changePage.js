@@ -11,7 +11,6 @@ export const changePage = (swiper) => {
   const nextBtnDate = document.getElementById("nextBtnDate");
   const nextBtnEstate = document.getElementById("nextBtnEstate");
   const nextBtnGender = document.getElementById("nextBtnGender");
-  const nextBtnEnd = document.getElementById("nextBtnEnd");
   const btnSlidePrev = document.getElementById("slidePrev");
 
   btnNext.addEventListener("click", () => {

@@ -59,6 +59,7 @@ export const header = () => {
                 </button>
             </div>
         </div>
+        <div>
             <ul id="renderCurp" class="flex justify-center text-center p-5 gap-0.5"></ul>
 
             <div class="">
@@ -74,12 +75,20 @@ export const header = () => {
             </div>
             <button id="initCurp"
                     class="btn border rounded-2xl text-white bg-blue-900 dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl">Empezar</button>
-            </div>
+                    </div>
             <div>
             </div>
             <div class="py-6">
                 <span id="instructions" class="lg:text-3xl md:text-2xl text-[16px] p-5 text-blue-800 dark:text-white"></span>
+                <div class="p-5">
+                <button id="copyCurp"
+                class="btn h-10 border rounded-2xl text-white bg-blue-900 dark:bg-white  dark:text-gray-900 text-lg md:text-xl lg:text-1xl hidden">Copiar CURP</button>
+            <a href="/" id="goHome"
+            class="btn h-10 border rounded-2xl text-white bg-blue-900 dark:bg-white  dark:text-gray-900 text-lg md:text-xl lg:text-1xl hidden">Salir</a>
             </div>
+
+    
+                </div>
         </div>
     </header>
 

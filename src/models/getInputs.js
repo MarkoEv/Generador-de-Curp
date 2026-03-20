@@ -158,5 +158,9 @@ export const getInputsValues = () => {
     curp.digitoEnd = randomNumber(1, 9);
     document.getElementById("digitoEnd").value = curp.digitoEnd;
     renderCurpBoxes();
+
+    // remover para entregar curp
+    document.getElementById("finButton").classList.remove("opacity-50");
+    document.getElementById("finButton").removeAttribute("disabled");
   });
 };

@@ -9,6 +9,8 @@ import { validationsInputs } from "./utils/validationsInputs";
 import { cancelTab } from "./utils/cancelTab";
 import { initSwiper } from "./utils/swiper"; // ← importar aquí
 import { pintLiByPage } from "./utils/pintLiByPage";
+import { clickEnd } from "./models/finButton";
+import { copyCURP } from "./utils/copyCurp";
 
 function insertHtml() {
   document.body.insertAdjacentHTML("afterbegin", header());
@@ -29,5 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   validationsInputs();
   cancelTab();  
+
+  clickEnd();
+  copyCURP();
 
 });
