@@ -31,7 +31,7 @@ export const clickEnd = () => {
         header.classList.remove("md:h-[50%]", "lg:h-[50%]", "h-[50%]");
         swiperHtml.setAttribute("hidden", "");
         renderCurpBoxes();
-        textInstruction("Gracias por visitarnos");
+        textInstruction("Ya puedes copiar tu curp");
         divTools.classList.add("hidden");
         logos.classList.remove("hidden")
         iconImg.classList.add("hidden")
