@@ -74,7 +74,7 @@ export const header = () => {
             <img src="${logoDark}" class="animate-pulse dark:hidden">
             </div>
             <button id="initCurp"
-                    class="btn border rounded-2xl text-white bg-blue-900 dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl">Empezar</button>
+                    class="btn border rounded-2xl text-white bg-blue-900 dark:bg-white w-40 md:w-60 lg:w-60 h-20 md:h-20 lg:h-20 dark:text-gray-900 text-lg md:text-2xl lg:text-3xl hover:opacity-50">Empezar</button>
                     </div>
             <div>
             </div>
