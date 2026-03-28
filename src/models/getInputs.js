@@ -18,6 +18,12 @@ export let curp = {
   digitoEnd: "",
 };
 
+function removeAccents(text) {
+  return text
+    .normalize("NFD") // separa letras y acentos
+    .replace(/[\u0300-\u036f]/g, ""); // elimina los acentos
+}
+
 // obtener numero random
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -71,33 +77,41 @@ export const getInputsValues = () => {
     primerName,
     "Se obtiene la primera letra y la primera consonante",
   );
-    clickInstructions(
+  clickInstructions(
     apellidoP,
     "Se obtiene la primera letra, la primera vocal y la primera consonante",
   );
-    clickInstructions(
+  clickInstructions(
     apellidoM,
     "Se obtiene la primera letra y la primera consonante",
   );
-  clickInstructions(
-    days,
-    "Se obtiene los dos dígitos del día",
-  );
-  clickInstructions(
-    months,
-    "Se obtiene los dos dígitos del mes",
-  );
+  clickInstructions(days, "Se obtiene los dos dígitos del día");
+  clickInstructions(months, "Se obtiene los dos dígitos del mes");
   clickInstructions(
     years,
-    "Se obtiene los dos ultimos dígitos del año y el siglo. ¿Año 2000 en adelante? el siglo es 'A', si no '0'"
+    "Se obtiene los dos ultimos dígitos del año y el siglo. ¿Año 2000 en adelante? el siglo es 'A', si no '0'",
   );
-  clickInstructions(
-    estates,
-    "Se obtiene el código del estado seleccionado",
-  );
+  clickInstructions(estates, "Se obtiene el código del estado seleccionado");
 
+  primerName.addEventListener("change", () => {
+    let name = removeAccents(primerName.value.trim());
+    const arrayName = name.split(/\s+/);
+    let selectedName = arrayName[0];
 
+    if (arrayName.length > 1) {
+      const first = arrayName[0].toLowerCase();
+      if (first === "maria" || first === "jose") {
+        selectedName = arrayName[1];
+      }
+    }
+    // primera letra
+    const nombre = selectedName.charAt(0).toUpperCase();
+    curp.digitoFour = nombre;
+    // primera consonante interna
+    curp.digitoConsoName = primerConsonant(selectedName, 1, 4);
 
+    renderCurpBoxes();
+  });
   // eventos para detectar fuera del input
   apellidoP.addEventListener("change", () => {
     curp.digitoOne = apellidoP.value[0].toUpperCase();
@@ -108,12 +122,6 @@ export const getInputsValues = () => {
   apellidoM.addEventListener("change", () => {
     curp.digitoTree = apellidoM.value[0].toUpperCase();
     curp.digitoConsoApM = primerConsonant(apellidoM.value, 1, 5);
-    renderCurpBoxes();
-  });
-  primerName.addEventListener("change", () => {
-    const nombre = primerName.value[0].toUpperCase();
-    curp.digitoFour = nombre;
-    curp.digitoConsoName = primerConsonant(primerName.value, 1, 4);
     renderCurpBoxes();
   });
   years.addEventListener("change", () => {
@@ -141,14 +149,14 @@ export const getInputsValues = () => {
       const targetH = document.getElementById("H");
       const targetM = document.getElementById("M");
 
-      if (e.target.id === "H") { 
-      targetH.classList.add("opacity-100")
-      targetM.classList.remove("opacity-100")
-    } else if(e.target.id === "M"){
-      targetM.classList.add("opacity-100")
-      targetH.classList.remove("opacity-100")
-    }
-      
+      if (e.target.id === "H") {
+        targetH.classList.add("opacity-100");
+        targetM.classList.remove("opacity-100");
+      } else if (e.target.id === "M") {
+        targetM.classList.add("opacity-100");
+        targetH.classList.remove("opacity-100");
+      }
+
       renderCurpBoxes();
     } else {
       return;
