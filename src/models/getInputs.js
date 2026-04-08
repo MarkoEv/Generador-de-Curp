@@ -75,7 +75,7 @@ export const getInputsValues = () => {
   // evento de click
   clickInstructions(
     primerName,
-    "Se obtiene la primera letra y la primera consonante",
+    "Se obtiene la primera letra y la primera consonante de tu nombre",
   );
   clickInstructions(
     apellidoP,
